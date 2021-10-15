@@ -26,23 +26,25 @@ def detect_faces(our_image):
     return img
 
 def main():
-    """Face Recognition App"""
+    """Disfraz Recognition App"""
 
-    st.title("SENA BOOTCAMP 2021 TEAM 1 SALON 8")
+    st.title("SENA BOOTCAMP 2021 EQUIPO 1 SALON 8")
 
     html_temp = """
     <body style="background-color:black;">
     <div style="background-color:teal ;padding:10px">
     <h2 style="color:white;text-align:center;">IA RECOGNIZER OPENCV WITH STREAMLITE</h2>
     <h4 style="color:white;text-aling:left;">Grupo conformado por: </h4>
-     <h4 style="color:white;text-aling:left;">Benjamin Guardo</h4>
-      <h4 style="color:white;text-aling:left;">Carlos Alvarez</h4>
-      <h4 style="color:white;text-aling:left;">Daniel Almanza</h4>
-      <h4 style="color:white;text-aling:left;">Isajar Mendoza</h4>
-      <h4 style="color:white;text-aling:left;">Lilia Almanza</h4>
-      <h4 style="color:white;text-aling:left;">Luis Perez</h4>
-      <h4 style="color:white;text-aling:left;">Sebastian Castiblanco</h4>
-       <h4 style="color:white;text-aling:left;">--------------------------------------------------</h4>
+    <h4 style="color:white;text-aling:left;">1. Benjamin Guardo - Ficha: 2340502</h4>
+    <h4 style="color:white;text-aling:left;">2. Carlos Alvarez - Ficha: 2340502</h4>
+    <h4 style="color:white;text-aling:left;">3. Daniel Almanza - Ficha: 2397136</h4>
+    <h4 style="color:white;text-aling:left;">4. Isajar Mendoza - Ficha: 2397136</h4>
+    <h4 style="color:white;text-aling:left;">5. Lilia Almanza - Instructora CEDAGRO</h4>
+    <h4 style="color:white;text-aling:left;">6. Luis Perez - Ficha: 2348209</h4>
+    <h4 style="color:white;text-aling:left;">7. Sebastian Castiblanco - Ficha: 2397137</h4>
+    <h4 style="color:white;text-aling:left;">8. Johny Núñez - Ficha: 2397137 </h4>
+    <h4 style="color:white;text-aling:left;">9. Roiman Herrera - Ficha: 2397137</h4>
+    <h4 style="color:white;text-aling:left;">10. Reinaldo Valencia - Ficha: 2357645</h4>
     </div>
     </body>
     

@@ -2,6 +2,7 @@ import streamlit as st
 import cv2
 from PIL import Image
 import numpy as np
+from streamlit_webrtc import webrtc_streamer
 
 
 face_cascade = cv2.CascadeClassifier('dataSet\cascade.xml')
@@ -65,7 +66,7 @@ def main():
         our_image = Image.open(image_file)
         st.text("Imagen original")
         st.image(our_image)
-
+    webrtc_streamer(key="sample")
     if st.button("Ejecutar reconocimiento"):
         
         result_img= detect_faces(our_image)
