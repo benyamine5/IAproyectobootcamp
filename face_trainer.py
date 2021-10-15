@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image
 
 recognizer=cv2.face.LBPHFaceRecognizer_create()
-path='C:/Users/Benjamin/Desktop/prueba' #ingresar direccion
+path='dataSet\marimondas\originales' #ingresar direccion
 def getImagesWithID(path):
     imagePaths=[os.path.join(path,f) for f in os.listdir(path)]
     faces=[]
@@ -14,7 +14,7 @@ def getImagesWithID(path):
         faceImg=Image.open(imagepath).convert('L')
         faceNp=np.array(faceImg,'uint8')
         print(imagepath)
-        ID=int(os.path.split(imagepath)[-1].split(".")[z])
+        ID=int(os.path.split(imagepath)[-1].split(".")[0])
         #dataset/User.1.3
         faces.append(faceNp)
         IDs.append(ID)

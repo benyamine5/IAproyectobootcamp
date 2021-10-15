@@ -1,7 +1,7 @@
 import cv2 #pip install opencv-contrib-python
 import os
 cam = cv2.VideoCapture(1,cv2.CAP_DSHOW)
-detector=cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+detector=cv2.CascadeClassifier('C:/Users/Benjamin/Desktop/SENA bootcamp/Bootcamp-IA-2021-Mentores/D_01_WS_4_LIBRERIAS_PYTHON/04_Modelo_Basico_IA/IArecognizer/classifier/cascade.xml')
 
 
 

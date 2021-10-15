@@ -4,7 +4,7 @@ from PIL import Image
 import numpy as np
 
 
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier('dataSet\cascade.xml')
 
 rec=cv2.face.LBPHFaceRecognizer_create()
 rec.read("trainingData.yml")
@@ -12,7 +12,7 @@ def detect_faces(our_image):
     img = np.array(our_image.convert('RGB'))
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     # Detect faces
-    faces = face_cascade.detectMultiScale(gray, 1.1, 4)
+    faces = face_cascade.detectMultiScale(gray, scaleFactor=5,minNeighbors=100,minSize=(60,60))
     # Draw rectangle around the faces
     name='Desconocido'
     for (x, y, w, h) in faces:
@@ -23,10 +23,10 @@ def detect_faces(our_image):
 
         if (uncertainty< 53):
             if (id == 1 or id == 3 or id == 5):
-                name = "Benjamin"
+                name = "Marimonda"
                 cv2.putText(img, name, (x, y + h), cv2.FONT_HERSHEY_COMPLEX_SMALL, 2.0, (0, 0, 255))
             else:
-                name = "Benjamin"
+                name = "Marimonda"
                 cv2.putText(img, name, (x, y + h), cv2.FONT_HERSHEY_COMPLEX_SMALL, 2.0, (0, 0, 255))
                 print("Ha sido reconocida pero no genera texto")
         else:
